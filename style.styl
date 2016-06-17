@@ -1,0 +1,288 @@
+color-primary = #906d5b   
+color-secondary = #fff
+color-body = #fcd000
+border-color = #000
+
+html 
+  height 100%
+  
+body
+  display flex
+  height 100%
+  justify-content center
+  align-items center
+  background #FEF2D8
+  
+.walrus
+  position relative
+  .body
+    position relative
+    width 250px
+    height 250px
+    border-radius 100px    
+    background-color color-primary    
+    animation breath 2s infinite ease-in-out
+    &:after,&:before
+      position absolute
+      left -10px
+      bottom 0
+      display block    
+      width 200px
+      height 150px
+      background-color color-primary
+      border-radius 50px      
+      content ''
+      transform skew(-8deg, 0)      
+    &:after
+      left auto
+      right -10px
+      transform skew(8deg, 0)
+    .head
+      .hairs
+        position absolute
+        top 0
+        left 0
+        width 100%    
+        .left
+          .hair
+            position absolute
+            z-index -1
+            width 5px
+            height 25px
+            background-color border-color            
+            &:nth-of-type(1)
+              top 14px
+              left 25px              
+              transform rotate(-35deg)
+            &:nth-of-type(2)
+              top: 17px
+              left: 15px              
+              transform: rotate(-61deg)
+            &:nth-of-type(3)
+              top: 27px
+              left: 8px              
+              transform: rotate(-86deg)
+        .right
+          .hair
+            position absolute
+            z-index -1
+            width 5px
+            height 25px
+            background-color border-color            
+            &:nth-of-type(1)
+              top 14px
+              right 25px              
+              transform rotate(30deg)
+            &:nth-of-type(2)
+              top 17px
+              right 15px              
+              transform rotate(55deg)
+            &:nth-of-type(3)
+              top 27px
+              right 8px              
+              transform rotate(76deg)
+      .eyes
+        .eye
+          position absolute
+          background-color color-secondary
+          border 3px solid border-color
+          animation blink 3s infinite ease-in-out    
+          &.left
+            top -30px
+            left 65px
+            width 55px
+            height 60px
+            border-radius 60px           
+            &:before
+              position absolute
+              top 50%
+              left 50%
+              width 10px
+              height 10px
+              background-color border-color
+              border-radius 10px
+              content ''
+              animation pupil_movement 6s infinite alternate ease-in-out
+            &:after
+              position absolute
+              top -9px
+              left -5px
+              width 50px
+              height 10px              
+              background-color border-color              
+              border-bottom-left-radius 50px
+              border-bottom-right-radius 50px
+              content ''
+              transform rotate(-15deg)
+              animation eyebrow_movement_left 2s infinite ease-in-out
+          &.right
+            top -25px
+            right 65px
+            width 55px
+            height 55px
+            border-radius 50px            
+            &:before
+              top 50%
+              left 30%
+              position absolute
+              width 10px
+              height 10px
+              background-color border-color
+              border-radius 10px              
+              content ''
+              animation pupil_movement 6s infinite alternate ease-in-out
+            &:after
+              position absolute
+              top -5px
+              right -5px
+              width 50px
+              height 10px              
+              background-color border-color
+              border-bottom-left-radius 50px
+              border-bottom-right-radius 50px
+              content ''
+              transform rotate(15deg)
+              animation eyebrow_movement_right 2s infinite ease-in-out
+      .nose
+        position absolute
+        top 55px
+        left calc(50% - 20px)
+        width 40px
+        height  20px        
+        background-color border-color
+        border-radius 30px
+        &:before
+          position absolute
+          top 5px
+          left calc(50% - 7px)
+          width 15px
+          height 3px
+          background-color color-secondary
+          border-radius 15px
+          content ''
+      .mouth
+        position absolute
+        top 80px        
+        left calc(50% - 50px)
+        z-index 5
+        width 100px
+        height 50px
+        background-color border-color
+        border-top-left-radius 15px
+        border-top-right-radius 15px
+        border-bottom-left-radius 90px
+        border-bottom-right-radius 90px       
+        &:before
+          position absolute
+          left 6px
+          width 22px
+          height 80px          
+          background-color color-secondary
+          border-top-left-radius 5px
+          border-top-right-radius 5px
+          border-bottom-left-radius 5px
+          border-bottom-right-radius 50px
+          content ''
+        &:after
+          position absolute
+          right 6px
+          width 22px
+          height 80px
+          background-color color-secondary
+          border-top-left-radius 5px
+          border-top-right-radius 5px
+          border-bottom-left-radius 50px
+          border-bottom-right-radius 5px
+          content ''
+    .legs
+      .leg
+        position absolute
+        bottom -30px        
+        width 50px
+        height 70px
+        background-color color-primary
+        border-top 0
+        &.left
+          left -30px
+          border-bottom-right-radius 50px
+          border-bottom-left-radius 20px
+          border-top-right-radius 40px
+          border-top-left-radius 7px 
+          transform rotate(55deg)
+        &.right
+          right -30px
+          border-bottom-right-radius 20px
+          border-bottom-left-radius 50px
+          border-top-right-radius 7px
+          border-top-left-radius 40px
+          transform rotate(-55deg)
+    .tail
+      position absolute
+      left -80px
+      bottom 120px
+      z-index -1
+      transform rotate(15deg) 
+      &:after
+        position absolute
+        top 4px
+        left 35px
+        width 100px
+        height 50px
+        background-color #7a5d4d        
+        border-radius 90px
+        content ''
+        transform rotate(26deg)
+      .fin
+        position absolute
+        width 50px
+        height 50px
+        background-color darken(color-primary,15%)              
+        border-top-left-radius 50px
+        border-top-right-radius 5px
+        border-bottom-left-radius 50px
+        border-bottom-right-radius 5px                  
+        &:nth-of-type(1)
+          left 21px
+          bottom -12px
+          transform rotate(15deg)
+        &:nth-of-type(2)
+          transform rotate(45deg)
+  
+          
+@keyframes breath
+  0%
+    transform scaleY(1)
+    transform-origin center bottom
+  50%
+    transform scaleY(1.03)
+    transform-origin center bottom
+    
+@keyframes eyebrow_movement_left
+  0%
+    transform translateY(0) rotate(-15deg)
+  50%
+    transform translateY(-5px) rotate(-20deg)
+    
+@keyframes eyebrow_movement_right
+  0%
+    transform translateY(0) rotate(15deg)
+  50%
+    transform translateY(-5px) rotate(20deg)
+    
+@keyframes pupil_movement
+  0%
+    transform translateX(0)
+  25%
+    transform translateX(9px)
+  40%
+    transform translateX(9px)
+  60%
+    transform translateX(-17px) translateY(-10px)
+    
+@keyframes blink
+  0%
+    background-color color-secondary
+  95%
+    background-color color-secondary
+  100%
+    background-color border-color
